@@ -9,11 +9,12 @@ public class Job {
     private static int nextId = 1;
 
     private String name;
-    private Employer employer;
-    private Location location;
-    private PositionType positionType;
-    private CoreCompetency coreCompetency;
+    private Employer employer; //has subclass Employer
+    private Location location; //has subclass Location
+    private PositionType positionType; //has subclass PositionType
+    private CoreCompetency coreCompetency; //has subclass CoreCompetency
 
+    //default constructor, increment id field
     public Job() {
         id = nextId;
         nextId++;
@@ -22,7 +23,7 @@ public class Job {
     public Job(String aName, Employer aEmployer, Location aLocation,
                PositionType aPositionType, CoreCompetency aSkill) {
 
-        this();
+        this(); //call default constructor
 
         name = aName;
         employer = aEmployer;
